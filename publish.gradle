@@ -6,15 +6,15 @@ if (gradlePublishSecret != null)
 	System.setProperty('gradle.publish.secret', gradlePublishSecret)
 
 pluginBundle {
-	website = 'magic_GitHub_Project_Page_magic'
-	vcsUrl = 'magic_GitHub_Project_Page_magic'
+	website = 'magic_github_owner_magic'
+	vcsUrl = 'magic_github_repo_name_magic'
 
 	plugins {
 		myPlugin {
-			id = 'magic_plugin_id_magic'
-			displayName = 'magic_plugin_display_name_magic'
-			description = 'magic_plugin_description_magic'
-			tags = []
+			id = 'magic_group_name_magic.magic_project_name_magic'
+			displayName = 'magic_project_name_magic'
+			description = 'magic_description_magic'
+			tags = ['']
 		}
 	}
 }

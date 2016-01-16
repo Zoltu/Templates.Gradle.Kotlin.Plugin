@@ -19,14 +19,20 @@ apply from: 'publish.gradle'
 
 repositories {
 	jcenter()
+	// necessary for spek
+	maven { url 'http://repository.jetbrains.com/all' }
 }
 
 dependencies {
 	compile(gradleApi())
 	compile(group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.0.0-beta-4584')
+
+	testCompile(group: 'org.jetbrains.spek', name: 'spek', version: '0.1.188')
 }
 
 // un-set the java source directories since this is a pure kotlin project
 sourceSets.main.java.srcDirs = []
+sourceSets.test.java.srcDirs = []
+sourceSets.test.resources.srcDirs = []
 
 group 'magic_group_name_magic'

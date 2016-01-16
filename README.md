@@ -1,2 +1,2 @@
-# Templates.Gradle.Kotlin.Plugin
-A RepoCreator template for Gradle Plugins written in Kotlin.
+# magic_group_name_magic.magic_project_name_magic
+magic_description_magic
