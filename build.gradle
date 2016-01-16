@@ -1,0 +1,32 @@
+// define where to get the kotlin plugin
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath(group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: '1.0.0-beta-4584')
+	}
+}
+
+plugins {
+	id 'com.gradle.plugin-publish' version '0.9.3'
+	id 'com.zoltu.gradle.plugin.git-versioning' version '1.0.9'
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'idea'
+apply from: 'publish.gradle'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile(gradleApi())
+	compile(group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib', version: '1.0.0-beta-4584')
+}
+
+// un-set the java source directories since this is a pure kotlin project
+sourceSets.main.java.srcDirs = []
+
+group 'magic_group_name_magic'

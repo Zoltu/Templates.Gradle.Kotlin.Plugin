@@ -1,0 +1,20 @@
+def gradlePublishKey = System.getenv('GRADLE_PUBLISH_KEY')
+if (gradlePublishKey != null)
+	System.setProperty('gradle.publish.key', gradlePublishKey)
+def gradlePublishSecret = System.getenv('GRADLE_PUBLISH_SECRET')
+if (gradlePublishSecret != null)
+	System.setProperty('gradle.publish.secret', gradlePublishSecret)
+
+pluginBundle {
+	website = 'magic_GitHub_Project_Page_magic'
+	vcsUrl = 'magic_GitHub_Project_Page_magic'
+
+	plugins {
+		myPlugin {
+			id = 'magic_plugin_id_magic'
+			displayName = 'magic_plugin_display_name_magic'
+			description = 'magic_plugin_description_magic'
+			tags = []
+		}
+	}
+}
