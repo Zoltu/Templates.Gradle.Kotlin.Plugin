@@ -6,8 +6,8 @@ if (gradlePublishSecret != null)
 	System.setProperty('gradle.publish.secret', gradlePublishSecret)
 
 pluginBundle {
-	website = 'magic_github_owner_magic'
-	vcsUrl = 'magic_github_repo_name_magic'
+	website = 'https://github.com/magic_github_owner_magic/magic_github_repo_name_magic'
+	vcsUrl = 'https://github.com/magic_github_owner_magic/magic_github_repo_name_magic'
 
 	plugins {
 		myPlugin {
