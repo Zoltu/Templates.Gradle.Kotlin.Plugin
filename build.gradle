@@ -9,13 +9,12 @@ buildscript {
 }
 
 plugins {
-	id 'com.gradle.plugin-publish' version '0.9.3'
 	id 'com.zoltu.git-versioning' version '1.0.12'
+	id 'com.zoltu.simple-gradle-plugin-publisher' version '1.0.3'
 }
 
 apply plugin: 'kotlin'
 apply plugin: 'idea'
-apply from: 'publish.gradle'
 
 repositories {
 	jcenter()
@@ -36,3 +35,13 @@ sourceSets.test.java.srcDirs = []
 sourceSets.test.resources.srcDirs = []
 
 group 'magic_group_name_magic'
+
+simpleGradlePluginPublishConfiguration {
+	gradlePublishKey = System.getenv('GRADLE_PUBLISH_KEY')
+	gradlePublishSecret = System.getenv('GRADLE_PUBLISH_SECRET')
+	vcsUrl = 'https://github.com/magic_github_owner_magic/magic_github_repo_name_magic'
+	id = 'magic_group_name_magic.magic_project_name_magic'
+	displayName = 'magic_project_name_magic'
+	description = 'magic_description_magic'
+	tags = ['']
+}
